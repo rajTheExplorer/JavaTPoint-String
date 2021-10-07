@@ -1,0 +1,17 @@
+class numberOfCharactersInString
+{
+	public static void main(String[] args) 
+	{
+			String s="lets take a string";
+			s=s+'\0';
+			char[] arr=s.toCharArray();
+			int count=0;
+			int i=0;
+			while(arr[i]!='\0')
+			{
+				count++;
+				i++;
+			}
+			System.out.println(count);
+	}
+}
