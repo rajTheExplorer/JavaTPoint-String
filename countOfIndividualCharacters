@@ -1,0 +1,31 @@
+import java.util.*;
+class App
+{
+    public static void main(String[] args)
+    {
+        String s="abcdefghijklmnopqrstuvwxyz";
+        char[] arr=s.toCharArray();
+        HashMap<Character,Integer> map=new HashMap<>();
+        int i=0;
+        while(i<arr.length)
+        {
+            if(!map.containsKey(arr[i]))
+            {
+                map.put(arr[i],1);
+            }
+            else
+            {
+                int oldVal=map.get(arr[i]);
+                int newVal=oldVal+1;
+                map.put(arr[i],newVal);
+            }
+            i++;
+        }
+        Set<Map.Entry<Character,Integer>> hmap=map.entrySet();
+        for(Map.Entry<Character,Integer> data:hmap)
+        {
+            System.out.println(data.getKey()+" "+data.getValue());
+        }
+
+    }
+}
